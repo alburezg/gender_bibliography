@@ -5,8 +5,8 @@ account: diego-alburez
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 352656
-bundleId: 1406684
+bundleId: 1406766
 url: https://diego-alburez.shinyapps.io/gender_check/
-when: 1527922195.08523
+when: 1527929012.12986
 asMultiple: FALSE
 asStatic: FALSE
