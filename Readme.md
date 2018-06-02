@@ -14,4 +14,4 @@ It is an RStudio's Shiny app and relies on the [Crossref API](https://github.com
 
 **This tool relies on the kindness of the [Crossref API](https://github.com/CrossRef/rest-api-doc). Don't abuse it!**
 
-Click (here)[http://alburez.me/2018-06-01-Gender-in-References/] to deploy the app.
+Click [here](http://alburez.me/2018-06-01-Gender-in-References/) to deploy the app.
