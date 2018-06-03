@@ -45,6 +45,7 @@ author_gender <- function(bib, api = "https://api.crossref.org/works?query.bibli
 
 ui <- fluidPage(
   textAreaInput("bib", "", width = "700px", height = "300px", placeholder = "Paste your bibliography here"),
+  actionButton("check", "Gender check!"),
   tableOutput("table")
 )
 
@@ -52,7 +53,7 @@ ui <- fluidPage(
 
 server <- function(input, output) {
   
-  tab <- eventReactive(input$bib, {
+  tab <- eventReactive(input$check, {
     
     if(input$bib != "") {
       
