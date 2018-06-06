@@ -1,9 +1,7 @@
-rm(list=ls())
-
 library(dplyr)
 library(httr)
 # install.packages("genderdata", repos = "http://packages.ropensci.org", type = "source")
-library(genderdata)
+# library(genderdata)
 library(gender)
 library(shiny)
 
@@ -44,8 +42,10 @@ author_gender <- function(bib, api = "https://api.crossref.org/works?query.bibli
 # UI ####
 
 ui <- fluidPage(
-  textAreaInput("bib", "", width = "700px", height = "300px", placeholder = "Paste your bibliography here"),
-  actionButton("check", "Gender check!"),
+  textAreaInput("bib", "", width = "700px", height = "300px", 
+                placeholder = "E.g. Boghossian, Paul (2010) The concept of genocide. Journal of Genocide Research 12(1-2): 69-80."
+  ),
+  actionButton("check", "Click only once and wait for the results!"),
   tableOutput("table")
 )
 
@@ -102,7 +102,6 @@ server <- function(input, output) {
   })
   
   output$table <- renderTable({ tab() })
-  
 }
 
 shinyApp(ui = ui, server = server)
