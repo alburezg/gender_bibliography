@@ -58,6 +58,7 @@ server <- function(input, output) {
     if(input$bib != "") {
       
       bib <- unlist(strsplit(input$bib, "\n"))
+      bib <- bib[bib!=""] # remove empty lines
       res_df <- do.call(rbind.data.frame, lapply(bib, author_gender) ) 
       
       # All authors
